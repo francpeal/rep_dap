@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="bd_dap">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=217.76.63.18;Initial Catalog=SicoDap</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>947de6a1-0516-423e-956f-7827a68e5d4c</DataSourceID>
+</RptDataSource>
