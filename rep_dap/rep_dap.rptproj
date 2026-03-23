@@ -54,6 +54,7 @@
   <ItemGroup>
     <Report Include="rpt_desempenio_vendedor.rdl" />
     <Report Include="rpt_prueba1.rdl" />
+    <Report Include="rpt_ven_ventas_articulo_anio.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>
