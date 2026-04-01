@@ -1,7 +1,25 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\desarrollo\\rep_dap\\",
   "Documents": [],
+=======
+  "WorkspaceRootPath": "D:\\Desarrollo\\reporting\\rep_dap\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_ventas_articulo_anio.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_desempenio_vendedor.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_prueba1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_prueba1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    }
+  ],
+>>>>>>> c305180e0fcdef0ed0e125968c93d41465acd68b
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +27,52 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": -1,
+=======
+          "SelectedChildIndex": 1,
+>>>>>>> c305180e0fcdef0ed0e125968c93d41465acd68b
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+<<<<<<< HEAD
+=======
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl",
+              "RelativeDocumentMoniker": "rep_dap\\rpt_ven_ventas_articulo_anio.rdl",
+              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "rep_dap\\rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-22T16:50:22.028Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl",
+              "RelativeDocumentMoniker": "rep_dap\\rpt_desempenio_vendedor.rdl",
+              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-16T00:52:30.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "rpt_prueba1.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_prueba1.rdl",
+              "RelativeDocumentMoniker": "rep_dap\\rpt_prueba1.rdl",
+              "ToolTip": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_prueba1.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\rep_dap\\rep_dap\\rpt_prueba1.rdl [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-15T00:57:15.507Z"
+>>>>>>> c305180e0fcdef0ed0e125968c93d41465acd68b
             }
           ]
         }
