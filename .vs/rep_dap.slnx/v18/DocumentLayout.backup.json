@@ -1,18 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Desarrollo\\reporting\\rep_dap\\",
+  "WorkspaceRootPath": "D:\\desarrollo\\rep_dap\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
-      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_ventas_articulo_anio.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
-      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_desempenio_vendedor.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_prueba1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
-      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_prueba1.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\desarrollo\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_pedido_sugerido.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,44 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< HEAD
-              "Title": "rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl",
-              "RelativeDocumentMoniker": "rep_dap\\rpt_desempenio_vendedor.rdl",
-              "ToolTip": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
-              "RelativeToolTip": "rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
-=======
-              "Title": "rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl",
-              "RelativeDocumentMoniker": "rep_dap\\rpt_ven_ventas_articulo_anio.rdl",
-              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
-              "RelativeToolTip": "rep_dap\\rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
->>>>>>> c305180e0fcdef0ed0e125968c93d41465acd68b
+              "Title": "rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl",
+              "RelativeDocumentMoniker": "rep_dap\\rpt_ven_pedido_sugerido.rdl",
+              "ToolTip": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "rep_dap\\rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-22T16:50:22.028Z",
+              "WhenOpened": "2026-04-01T14:07:32.544Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl",
-              "RelativeDocumentMoniker": "rep_dap\\rpt_desempenio_vendedor.rdl",
-              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
-              "RelativeToolTip": "rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-16T00:52:30.712Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "rpt_prueba1.rdl [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_prueba1.rdl",
-              "RelativeDocumentMoniker": "rep_dap\\rpt_prueba1.rdl",
-              "ToolTip": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_prueba1.rdl [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\rep_dap\\rep_dap\\rpt_prueba1.rdl [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-15T00:57:15.507Z"
             }
           ]
         }
