@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>18.4.11620.152</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-03-29T17:07:18.7251286Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-04-02T15:27:08.9999727Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -1458,7 +1458,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -3791,6 +3790,7 @@ nothing)</Value>
         </Values>
       </DefaultValue>
       <Prompt>Con Venta 12M?</Prompt>
+      <Hidden>true</Hidden>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>

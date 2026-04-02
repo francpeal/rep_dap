@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Desarrollo\\reporting\\rep_dap\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
-      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_ficha_articulo.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
       "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_pedido_sugerido.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_ficha_articulo.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
@@ -39,49 +39,37 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< HEAD
+              "Title": "rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl",
+              "RelativeDocumentMoniker": "rep_dap\\rpt_ven_pedido_sugerido.rdl",
+              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]*",
+              "RelativeToolTip": "rep_dap\\rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-02T15:26:10.533Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "rpt_ven_ficha_articulo.rdl [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl",
               "RelativeDocumentMoniker": "rep_dap\\rpt_ven_ficha_articulo.rdl",
               "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl [Dise\u00F1o]",
               "RelativeToolTip": "rep_dap\\rpt_ven_ficha_articulo.rdl [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-29T22:44:53.353Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl",
-              "RelativeDocumentMoniker": "rep_dap\\rpt_ven_pedido_sugerido.rdl",
-              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
-              "RelativeToolTip": "rep_dap\\rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-29T17:07:18.751Z",
+              "WhenOpened": "2026-04-02T15:26:09.676Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-=======
-<<<<<<< HEAD
-              "Title": "rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl",
-              "RelativeDocumentMoniker": "rep_dap\\rpt_desempenio_vendedor.rdl",
-              "ToolTip": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
-              "RelativeToolTip": "rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
-=======
->>>>>>> 4b4afa0eb3f6f4069e49c8a1551ed743b85cecd2
               "Title": "rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl",
               "RelativeDocumentMoniker": "rep_dap\\rpt_ven_ventas_articulo_anio.rdl",
               "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
               "RelativeToolTip": "rep_dap\\rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
->>>>>>> c305180e0fcdef0ed0e125968c93d41465acd68b
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-22T16:50:22.028Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHJSURBVEhLtZYxctpAFIY/ZaxKM2\u002BZIQUpOIHgAgoHMCdwyuAzOLXxbVh6RjoA4FIUkq8Ql\u002BxmgIKCNIggaXGEx/5mtnm7O9/o1\u002B6TPIDNZjP2PO\u002BRD\u002BRwODwFQTD2OAqstY/z\u002BRxjTHXtVSilGAwGiMhTEATjm2LCGMNsNmO9XqNElXc1xFhDq9Wi3\u002B8jIgCcBAVR9J3h7bBabkScxLy85KVaTaCUQinFcrnAWFudrtELQ8KwB8e9VWoCgO12S7pKef39Wp2qISIngQunoN1uM/p5z36/r07VKLK\u002BxJdqAWC327FapSyfl6WR5RkiQrfbPQ1XLOc4BUVEy8WiNNI0ZbfbVpe/yVUR\u002Bf4N7fbXUu1/OJ/gPKLzWDqdb/i\u002BD4C1liSJ0VNNnMQXL6hTcB7RpViMNcRJjNYTkjjGXjjSTkER0cPDL\u002B5Ho6tjOccp8H2fTqdTiiXPM/RUo6eaPM\u002BqWy7iFLjI8hytJ2g9IcvL7eAtGgvei1PQ9IQ0wSloekKa4BR8JM6brEQxvB1irEVEEBF6YQh3P\u002BDYol1rXNQE1hiMNYS9fy3Y/rGIUkRRdKq51ljHu6oJivbwHqy1te766R/9k\u002BCzflv\u002BAo1VAGCqVAFmAAAAAElFTkSuQmCC",
+              "WhenOpened": "2026-04-02T15:26:10.538Z"
             },
             {
               "$type": "Document",
@@ -92,7 +80,7 @@
               "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
               "RelativeToolTip": "rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-16T00:52:30.712Z"
+              "WhenOpened": "2026-04-02T15:26:10.54Z"
             },
             {
               "$type": "Document",
@@ -103,7 +91,7 @@
               "ToolTip": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_prueba1.rdl [Dise\u00F1o]",
               "RelativeToolTip": "..\\..\\rep_dap\\rep_dap\\rpt_prueba1.rdl [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-15T00:57:15.507Z"
+              "WhenOpened": "2026-04-02T15:26:10.543Z"
             }
           ]
         }
