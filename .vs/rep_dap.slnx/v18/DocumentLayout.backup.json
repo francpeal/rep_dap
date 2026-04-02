@@ -39,6 +39,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "rpt_ven_ficha_articulo.rdl [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl",
               "RelativeDocumentMoniker": "rep_dap\\rpt_ven_ficha_articulo.rdl",
@@ -63,11 +64,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+=======
+<<<<<<< HEAD
+              "Title": "rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl",
+              "RelativeDocumentMoniker": "rep_dap\\rpt_desempenio_vendedor.rdl",
+              "ToolTip": "D:\\desarrollo\\rep_dap\\rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "rep_dap\\rpt_desempenio_vendedor.rdl [Dise\u00F1o]",
+=======
+>>>>>>> 4b4afa0eb3f6f4069e49c8a1551ed743b85cecd2
               "Title": "rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl",
               "RelativeDocumentMoniker": "rep_dap\\rpt_ven_ventas_articulo_anio.rdl",
               "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
               "RelativeToolTip": "rep_dap\\rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
+>>>>>>> c305180e0fcdef0ed0e125968c93d41465acd68b
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-03-22T16:50:22.028Z",
               "EditorCaption": " [Dise\u00F1o]"
