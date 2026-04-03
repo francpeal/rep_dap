@@ -7,19 +7,9 @@
     </am:CreatedBy>
     <am:UpdatedBy>
       <am:Name>SSDTRS</am:Name>
-<<<<<<< HEAD
-      <am:Version>18.3.11527.330</am:Version>
-    </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-04-01T14:07:31.0656504Z</am:LastModifiedTimestamp>
-=======
       <am:Version>18.4.11620.152</am:Version>
     </am:UpdatedBy>
-<<<<<<< HEAD
-    <am:LastModifiedTimestamp>2026-04-02T15:27:08.9999727Z</am:LastModifiedTimestamp>
-=======
-    <am:LastModifiedTimestamp>2026-03-29T17:07:18.7251286Z</am:LastModifiedTimestamp>
->>>>>>> da730c29f7d6b774a29f1308a5db8e2a55cca073
->>>>>>> fd39041a2152ffff6833f2cb467d8751c2bd9244
+    <am:LastModifiedTimestamp>2026-04-02T15:55:51.2028327Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -38,8 +28,14 @@
           <QueryParameter Name="@filtro_ventas">
             <Value>=Parameters!filtro_ventas.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@filtro_linea">
+            <Value>=Parameters!filtro_linea.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@solo_pedido">
+            <Value>=Parameters!solo_pedido.Value</Value>
+          </QueryParameter>
         </QueryParameters>
-        <CommandText>exec sp_ven_ventas_pivot_12m @filtro_ventas</CommandText>
+        <CommandText>exec sp_ven_ventas_pivot_12m @filtro_ventas, @filtro_linea, @solo_pedido</CommandText>
       </Query>
       <Fields>
         <Field Name="cod_articulo_a">
@@ -82,12 +78,24 @@
           <DataField>vta_prom_12m</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="cod_articulo">
-          <DataField>cod_articulo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="categoria">
           <DataField>categoria</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nro_meses_c_venta">
+          <DataField>nro_meses_c_venta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="pedir">
+          <DataField>pedir</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="vta_prom_mcv">
+          <DataField>vta_prom_mcv</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="cod_articulo">
+          <DataField>cod_articulo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Feb_25">
@@ -233,23 +241,26 @@
                   <Width>2cm</Width>
                 </TablixColumn>
                 <TablixColumn>
+                  <Width>2.5cm</Width>
+                </TablixColumn>
+                <TablixColumn>
                   <Width>2cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.5cm</Width>
                 </TablixColumn>
-<<<<<<< HEAD
                 <TablixColumn>
-                  <Width>1.90733cm</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>1.88617cm</Width>
+                  <Width>2.5cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.5cm</Width>
                 </TablixColumn>
-=======
->>>>>>> da730c29f7d6b774a29f1308a5db8e2a55cca073
+                <TablixColumn>
+                  <Width>2.5cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.5cm</Width>
+                </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
@@ -1010,6 +1021,44 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox37">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Venta prom (QMV)</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox37</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>LightSteelBlue</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox54">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -1055,7 +1104,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Stock Disponible(Q)</Value>
+                                  <Value>Stock Disp.(Q)</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1276,14 +1325,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox48">
+                        <Textbox Name="Textbox23">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Stock Deseado</Value>
+                                  <Value>Nro Meses C/Venta</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1292,11 +1341,11 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox48</rd:DefaultName>
+                          <rd:DefaultName>Textbox23</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1352,6 +1401,44 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox20">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Ult. Precio Compra (USD)</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox20</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>LightSteelBlue</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox15">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -1388,7 +1475,6 @@
                         </Textbox>
                       </CellContents>
                     </TablixCell>
-<<<<<<< HEAD
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox2">
@@ -1436,7 +1522,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Pedido Sugerido</Value>
+                                  <Value>Pedido Sug. (Q)</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1474,7 +1560,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Pedido (USD)</Value>
+                                  <Value>Pedido Sug. (USD)</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1503,8 +1589,6 @@
                         </Textbox>
                       </CellContents>
                     </TablixCell>
-=======
->>>>>>> da730c29f7d6b774a29f1308a5db8e2a55cca073
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -1597,13 +1681,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-                        <rd:Selected>true</rd:Selected>
->>>>>>> da730c29f7d6b774a29f1308a5db8e2a55cca073
->>>>>>> fd39041a2152ffff6833f2cb467d8751c2bd9244
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2289,6 +2366,45 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="vta_prom_mcv">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!vta_prom_mcv.Value</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <Format>n2</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>vta_prom_mcv</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>PaleTurquoise</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <rd:Selected>true</rd:Selected>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="vta_prom_12m">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -2558,34 +2674,31 @@ nothing)</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox49">
+                        <Textbox Name="nro_meses_c_venta">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=ceiling(Fields!vta_prom_12m.Value*5)</Value>
+                                  <Value>=Fields!nro_meses_c_venta.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                    <Format>n0</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox49</rd:DefaultName>
+                          <rd:DefaultName>nro_meses_c_venta</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>Orange</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2618,6 +2731,42 @@ nothing)</Value>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>cup_dolares</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox21">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox21</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -2669,7 +2818,6 @@ nothing)</Value>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
-<<<<<<< HEAD
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox4">
@@ -2679,13 +2827,11 @@ nothing)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=5*Fields!vta_prom_12m.Value</Value>
+                                  <Value>=ceiling(5*Fields!vta_prom_12m.Value)</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>n0</Format>
-                                    <Color>Blue</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2700,7 +2846,6 @@ nothing)</Value>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>WhiteSmoke</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2719,13 +2864,14 @@ nothing)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=iif(Fields!stock.Value&lt;reportitems!Textbox4.Value,
-ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
+                                  <Value>=iif(ceiling(5*Fields!vta_prom_12m.Value)&gt;Fields!stock.Value,
+ceiling(5*Fields!vta_prom_12m.Value)-Fields!stock.Value,0)</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Color>Brown</Color>
+                                    <Format>n0</Format>
+                                    <Color>=iif(reportitems!Textbox10.Value&gt;0,"Maroon","blue")</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2740,7 +2886,6 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>WhiteSmoke</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2759,13 +2904,13 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=reportitems!Textbox10.Value*Fields!cup_dolares.Value</Value>
+                                  <Value>=iif(ceiling(5*Fields!vta_prom_12m.Value)&gt;Fields!stock.Value,
+(ceiling(5*Fields!vta_prom_12m.Value)-Fields!stock.Value)*Fields!cup_dolares.Value,0)</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Format>n2</Format>
-                                    <Color>Brown</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2780,7 +2925,6 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>WhiteSmoke</BackgroundColor>
                             <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -2790,8 +2934,6 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
-=======
->>>>>>> da730c29f7d6b774a29f1308a5db8e2a55cca073
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -3531,6 +3673,43 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox47">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox47</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>WhiteSmoke</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Textbox74">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -3784,7 +3963,7 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox50">
+                        <Textbox Name="Textbox36">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -3799,11 +3978,11 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox50</rd:DefaultName>
+                          <rd:DefaultName>Textbox36</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -3856,6 +4035,42 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="Textbox22">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox22</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="inventario_dolares1">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -3892,7 +4107,6 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
-<<<<<<< HEAD
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox6">
@@ -3932,7 +4146,7 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox21">
+                        <Textbox Name="Textbox12">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -3952,7 +4166,7 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox21</rd:DefaultName>
+                          <rd:DefaultName>Textbox12</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -3969,7 +4183,7 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox20">
+                        <Textbox Name="Textbox19">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
@@ -3989,7 +4203,7 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox20</rd:DefaultName>
+                          <rd:DefaultName>Textbox19</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -4004,8 +4218,6 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                         </Textbox>
                       </CellContents>
                     </TablixCell>
-=======
->>>>>>> da730c29f7d6b774a29f1308a5db8e2a55cca073
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
@@ -4031,6 +4243,22 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember>
+                  <Visibility>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                </TablixMember>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
@@ -4039,15 +4267,6 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-<<<<<<< HEAD
-                <TablixMember />
-                <TablixMember />
-                <TablixMember />
-=======
->>>>>>> da730c29f7d6b774a29f1308a5db8e2a55cca073
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -4072,11 +4291,7 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
             </TablixRowHierarchy>
             <DataSetName>ds</DataSetName>
             <Height>1.8cm</Height>
-<<<<<<< HEAD
-            <Width>59.11517cm</Width>
-=======
-            <Width>52.82167cm</Width>
->>>>>>> da730c29f7d6b774a29f1308a5db8e2a55cca073
+            <Width>65.32167cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -4087,11 +4302,7 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
         <Height>0.70866in</Height>
         <Style />
       </Body>
-<<<<<<< HEAD
-      <Width>23.27369in</Width>
-=======
-      <Width>21.15026in</Width>
->>>>>>> da730c29f7d6b774a29f1308a5db8e2a55cca073
+      <Width>25.91404in</Width>
       <Page>
         <PageHeader>
           <Height>0.82959cm</Height>
@@ -4189,6 +4400,20 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
       <Prompt>Con Venta 12M?</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
+    <ReportParameter Name="filtro_linea">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Filtrar por nombre de linea :</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="solo_pedido">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>true</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Solo Pedido ?</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -4199,6 +4424,16 @@ ceiling(5*Fields!vta_prom_12m.Value-Fields!stock.Value),0)</Value>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>filtro_ventas</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>filtro_linea</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>solo_pedido</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
