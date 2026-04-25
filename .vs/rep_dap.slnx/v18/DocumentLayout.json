@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Desarrollo\\reporting\\rep_dap\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_ficha_articulo.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_disponibilidad.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_disponibilidad.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
       "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_pedido_sugerido.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
     }
@@ -23,14 +31,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "rpt_ven_ficha_articulo.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl",
+              "RelativeDocumentMoniker": "rep_dap\\rpt_ven_ficha_articulo.rdl",
+              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "rep_dap\\rpt_ven_ficha_articulo.rdl [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-16T19:16:22.484Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "rpt_ven_disponibilidad.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_disponibilidad.rdl",
+              "RelativeDocumentMoniker": "rep_dap\\rpt_ven_disponibilidad.rdl",
+              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_disponibilidad.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "rep_dap\\rpt_ven_disponibilidad.rdl [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-16T13:52:00.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl",
               "RelativeDocumentMoniker": "rep_dap\\rpt_ven_pedido_sugerido.rdl",
               "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
               "RelativeToolTip": "rep_dap\\rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-02T15:53:41.739Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-04-02T15:53:41.739Z"
             }
           ]
         }

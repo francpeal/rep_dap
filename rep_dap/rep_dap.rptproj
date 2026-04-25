@@ -54,6 +54,7 @@
   <ItemGroup>
     <Report Include="rpt_desempenio_vendedor.rdl" />
     <Report Include="rpt_prueba1.rdl" />
+    <Report Include="rpt_ven_disponibilidad.rdl" />
     <Report Include="rpt_ven_ficha_articulo.rdl" />
     <Report Include="rpt_ven_pedido_sugerido.rdl" />
     <Report Include="rpt_ven_ventas_articulo_anio.rdl" />
