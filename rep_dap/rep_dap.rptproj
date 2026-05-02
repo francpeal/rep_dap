@@ -54,10 +54,14 @@
   <ItemGroup>
     <Report Include="rpt_desempenio_vendedor.rdl" />
     <Report Include="rpt_prueba1.rdl" />
+    <Report Include="rpt_ven_cartera_vendedor.rdl" />
+    <Report Include="rpt_ven_consolidado_ventas_carteras.rdl" />
     <Report Include="rpt_ven_disponibilidad.rdl" />
     <Report Include="rpt_ven_ficha_articulo.rdl" />
     <Report Include="rpt_ven_pedido_sugerido.rdl" />
     <Report Include="rpt_ven_ventas_articulo_anio.rdl" />
+    <Report Include="rpt_ven_ventas_de_producto.rdl" />
+    <Report Include="rpt_ven_ventas_por_producto.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>
