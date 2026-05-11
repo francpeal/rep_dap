@@ -7,9 +7,9 @@
     </am:CreatedBy>
     <am:UpdatedBy>
       <am:Name>SSDTRS</am:Name>
-      <am:Version>18.4.11620.152</am:Version>
+      <am:Version>18.5.11716.220</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-04-16T19:16:22.4335948Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-05-11T02:15:46.5981881Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -79,7 +79,7 @@ where arts.ArtCod = @cod_articulo</CommandText>
             <Value>=Parameters!cod_articulo.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>select * from fnc_getventasarticulo_3a (@cod_articulo)</CommandText>
+        <CommandText>select * from rep.fnc_getventasarticulo_3a (@cod_articulo)</CommandText>
       </Query>
       <Fields>
         <Field Name="fecha">
@@ -109,6 +109,10 @@ where arts.ArtCod = @cod_articulo</CommandText>
         <Field Name="costo_dolares">
           <DataField>costo_dolares</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="nro_clientes">
+          <DataField>nro_clientes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="margen">
           <DataField>margen</DataField>

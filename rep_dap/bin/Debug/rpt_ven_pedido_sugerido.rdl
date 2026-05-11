@@ -7,9 +7,9 @@
     </am:CreatedBy>
     <am:UpdatedBy>
       <am:Name>SSDTRS</am:Name>
-      <am:Version>18.4.11620.152</am:Version>
+      <am:Version>18.5.11716.220</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-04-12T02:13:23.3681224Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-05-11T01:54:21.7061945Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -33,7 +33,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandText>
-select * from fnc_ven_getVentas_per12m(@filtro_linea, @solo_pedido)</CommandText>
+select * from rep.fnc_ven_getVentas_per12m(@filtro_linea, @solo_pedido)</CommandText>
       </Query>
       <Fields>
         <Field Name="cod_articulo">

@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>18.5.11716.220</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-05-07T16:26:07.6057190Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-05-10T23:27:20.4898343Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -25,23 +25,23 @@
       <Query>
         <DataSourceName>fuente</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@user_login">
-            <Value>=Parameters!user_login.Value</Value>
+          <QueryParameter Name="@cod_vendedor">
+            <Value>=Parameters!cod_vendedor.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandText>select 
     ltrim(rtrim(b.DES_VEND)) as nom_vendedor,
-    a.CDG_ALT ruc, 
+    ltrim(rtrim(a.CDG_ALT)) ruc, 
     ltrim(rtrim(a.DES_CLI)) as razon_social,
     vtas.vta_anio_anterior,
     vtas.vta_anio_actual,
     a.dir_cli as direccion,
     isnull(a.tel_cli, a.fax_cli) as telefono,
-    a.ema_cli as email,
+    case when isnull(a.ema_cli,'')&lt;&gt;'' then 'Si' else 'No' end as email,
     isnull(vta6.per,eomonth(getdate(),0)) as per,
     isnull(vta6.venta_mes,0) as venta_mes,
     cl.clientetipodesc as tipo_cliente, 
-    cl.ubidist as distrito
+    cl.ubidist as distrito, ax.nro_unidades
 from 
     m_client a 
     inner join M_VENDED b on a.CDG_VEND = b.CDG_VEND
@@ -72,8 +72,9 @@ from
         having sum(CompMonto)&gt;0
     ) vta6 on a.ruc_cli = vta6.cod_cliente
    left join vw_cliente cl on cl.ClienteCod = a.ruc_cli
+   left join aux_nro_unidades_cliente ax on ax.cod_cliente = a.CDG_ALT
 where 
-    b.email = @user_login
+    a.CDG_VEND = @cod_vendedor
     and isnull(a.CDG_ALT,'')&lt;&gt;''</CommandText>
       </Query>
       <Fields>
@@ -125,17 +126,20 @@ where
           <DataField>distrito</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="nro_unidades">
+          <DataField>nro_unidades</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
     </DataSet>
     <DataSet Name="vendedores">
       <Query>
         <DataSourceName>fuente</DataSourceName>
-        <QueryParameters>
-          <QueryParameter Name="@user_login">
-            <Value>=Parameters!user_login.Value</Value>
-          </QueryParameter>
-        </QueryParameters>
-        <CommandText>select cdg_vend as cod_vendedor, ltrim(rtrim(DES_VEND)) as nom_vendedor, email as user_login from M_VENDED where isnull(email,'')&lt;&gt;'' and isnull(email,'') = @user_login</CommandText>
+        <CommandText>select a.cdg_vend as cod_vendedor, ltrim(rtrim(b.DES_VEND)) as nom_vendedor
+from m_client a 
+        inner join M_VENDED b on a.cdg_vend = b.cdg_vend
+group by a.cdg_vend, ltrim(rtrim(DES_VEND))
+order by 2 </CommandText>
       </Query>
       <Fields>
         <Field Name="cod_vendedor">
@@ -144,10 +148,6 @@ where
         </Field>
         <Field Name="nom_vendedor">
           <DataField>nom_vendedor</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="user_login">
-          <DataField>user_login</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -312,6 +312,59 @@ where
                   </TablixCornerCell>
                   <TablixCornerCell>
                     <CellContents>
+                      <Textbox Name="Textbox1">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Nro Unidades</Value>
+                                <Style>
+                                  <FontFamily>Arial</FontFamily>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>(Cidatt)</Value>
+                                <Style>
+                                  <FontFamily>Arial</FontFamily>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox1</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>LightSteelBlue</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                  <TablixCornerCell>
+                    <CellContents>
                       <Textbox Name="Textbox41">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
@@ -365,7 +418,9 @@ where
                                 </Style>
                               </TextRun>
                             </TextRuns>
-                            <Style />
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
                           </Paragraph>
                         </Paragraphs>
                         <rd:DefaultName>Textbox31</rd:DefaultName>
@@ -983,14 +1038,14 @@ where
                                   <TablixHeader>
                                     <Size>2.5cm</Size>
                                     <CellContents>
-                                      <Textbox Name="distrito">
+                                      <Textbox Name="nro_unidades">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!distrito.Value</Value>
+                                                <Value>=max(Fields!nro_unidades.Value)</Value>
                                                 <Style>
                                                   <FontFamily>Arial</FontFamily>
                                                   <FontSize>8pt</FontSize>
@@ -1002,7 +1057,7 @@ where
                                             </Style>
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>distrito</rd:DefaultName>
+                                        <rd:DefaultName>nro_unidades</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Color>LightGrey</Color>
@@ -1020,26 +1075,28 @@ where
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>5.04cm</Size>
+                                        <Size>2.5cm</Size>
                                         <CellContents>
-                                          <Textbox Name="email1">
+                                          <Textbox Name="distrito">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=rtrim(ltrim(Fields!email.Value))</Value>
+                                                    <Value>=Fields!distrito.Value</Value>
                                                     <Style>
                                                       <FontFamily>Arial</FontFamily>
                                                       <FontSize>8pt</FontSize>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style />
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>email1</rd:DefaultName>
+                                            <rd:DefaultName>distrito</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1057,16 +1114,16 @@ where
                                       <TablixMembers>
                                         <TablixMember>
                                           <TablixHeader>
-                                            <Size>2.5cm</Size>
+                                            <Size>1.36229cm</Size>
                                             <CellContents>
-                                              <Textbox Name="Textbox34">
+                                              <Textbox Name="email1">
                                                 <CanGrow>true</CanGrow>
                                                 <KeepTogether>true</KeepTogether>
                                                 <Paragraphs>
                                                   <Paragraph>
                                                     <TextRuns>
                                                       <TextRun>
-                                                        <Value>=ltrim(rtrim(Fields!telefono.Value))</Value>
+                                                        <Value>=rtrim(ltrim(Fields!email.Value))</Value>
                                                         <Style>
                                                           <FontFamily>Arial</FontFamily>
                                                           <FontSize>8pt</FontSize>
@@ -1078,7 +1135,7 @@ where
                                                     </Style>
                                                   </Paragraph>
                                                 </Paragraphs>
-                                                <rd:DefaultName>Textbox34</rd:DefaultName>
+                                                <rd:DefaultName>email1</rd:DefaultName>
                                                 <Style>
                                                   <Border>
                                                     <Color>LightGrey</Color>
@@ -1093,6 +1150,47 @@ where
                                               </Textbox>
                                             </CellContents>
                                           </TablixHeader>
+                                          <TablixMembers>
+                                            <TablixMember>
+                                              <TablixHeader>
+                                                <Size>2.5cm</Size>
+                                                <CellContents>
+                                                  <Textbox Name="Textbox34">
+                                                    <CanGrow>true</CanGrow>
+                                                    <KeepTogether>true</KeepTogether>
+                                                    <Paragraphs>
+                                                      <Paragraph>
+                                                        <TextRuns>
+                                                          <TextRun>
+                                                            <Value>=ltrim(rtrim(Fields!telefono.Value))</Value>
+                                                            <Style>
+                                                              <FontFamily>Arial</FontFamily>
+                                                              <FontSize>8pt</FontSize>
+                                                            </Style>
+                                                          </TextRun>
+                                                        </TextRuns>
+                                                        <Style>
+                                                          <TextAlign>Center</TextAlign>
+                                                        </Style>
+                                                      </Paragraph>
+                                                    </Paragraphs>
+                                                    <rd:DefaultName>Textbox34</rd:DefaultName>
+                                                    <Style>
+                                                      <Border>
+                                                        <Color>LightGrey</Color>
+                                                        <Style>Solid</Style>
+                                                      </Border>
+                                                      <VerticalAlign>Middle</VerticalAlign>
+                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                      <PaddingRight>2pt</PaddingRight>
+                                                      <PaddingTop>2pt</PaddingTop>
+                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                    </Style>
+                                                  </Textbox>
+                                                </CellContents>
+                                              </TablixHeader>
+                                            </TablixMember>
+                                          </TablixMembers>
                                         </TablixMember>
                                       </TablixMembers>
                                     </TablixMember>
@@ -1272,7 +1370,7 @@ where
                                   <TablixHeader>
                                     <Size>2.5cm</Size>
                                     <CellContents>
-                                      <Textbox Name="Textbox49">
+                                      <Textbox Name="Textbox4">
                                         <CanGrow>true</CanGrow>
                                         <KeepTogether>true</KeepTogether>
                                         <Paragraphs>
@@ -1292,7 +1390,7 @@ where
                                             </Style>
                                           </Paragraph>
                                         </Paragraphs>
-                                        <rd:DefaultName>Textbox49</rd:DefaultName>
+                                        <rd:DefaultName>Textbox4</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Color>LightGrey</Color>
@@ -1311,9 +1409,9 @@ where
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>5.04cm</Size>
+                                        <Size>2.5cm</Size>
                                         <CellContents>
-                                          <Textbox Name="Textbox50">
+                                          <Textbox Name="Textbox49">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
@@ -1328,10 +1426,12 @@ where
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
-                                                <Style />
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>Textbox50</rd:DefaultName>
+                                            <rd:DefaultName>Textbox49</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1350,9 +1450,9 @@ where
                                       <TablixMembers>
                                         <TablixMember>
                                           <TablixHeader>
-                                            <Size>2.5cm</Size>
+                                            <Size>1.36229cm</Size>
                                             <CellContents>
-                                              <Textbox Name="Textbox51">
+                                              <Textbox Name="Textbox50">
                                                 <CanGrow>true</CanGrow>
                                                 <KeepTogether>true</KeepTogether>
                                                 <Paragraphs>
@@ -1372,7 +1472,7 @@ where
                                                     </Style>
                                                   </Paragraph>
                                                 </Paragraphs>
-                                                <rd:DefaultName>Textbox51</rd:DefaultName>
+                                                <rd:DefaultName>Textbox50</rd:DefaultName>
                                                 <Style>
                                                   <Border>
                                                     <Color>LightGrey</Color>
@@ -1388,6 +1488,49 @@ where
                                               </Textbox>
                                             </CellContents>
                                           </TablixHeader>
+                                          <TablixMembers>
+                                            <TablixMember>
+                                              <TablixHeader>
+                                                <Size>2.5cm</Size>
+                                                <CellContents>
+                                                  <Textbox Name="Textbox51">
+                                                    <CanGrow>true</CanGrow>
+                                                    <KeepTogether>true</KeepTogether>
+                                                    <Paragraphs>
+                                                      <Paragraph>
+                                                        <TextRuns>
+                                                          <TextRun>
+                                                            <Value />
+                                                            <Style>
+                                                              <FontFamily>Arial</FontFamily>
+                                                              <FontSize>8pt</FontSize>
+                                                              <FontWeight>Bold</FontWeight>
+                                                            </Style>
+                                                          </TextRun>
+                                                        </TextRuns>
+                                                        <Style>
+                                                          <TextAlign>Center</TextAlign>
+                                                        </Style>
+                                                      </Paragraph>
+                                                    </Paragraphs>
+                                                    <rd:DefaultName>Textbox51</rd:DefaultName>
+                                                    <Style>
+                                                      <Border>
+                                                        <Color>LightGrey</Color>
+                                                        <Style>Solid</Style>
+                                                      </Border>
+                                                      <BackgroundColor>LightGrey</BackgroundColor>
+                                                      <VerticalAlign>Middle</VerticalAlign>
+                                                      <PaddingLeft>2pt</PaddingLeft>
+                                                      <PaddingRight>2pt</PaddingRight>
+                                                      <PaddingTop>2pt</PaddingTop>
+                                                      <PaddingBottom>2pt</PaddingBottom>
+                                                    </Style>
+                                                  </Textbox>
+                                                </CellContents>
+                                              </TablixHeader>
+                                            </TablixMember>
+                                          </TablixMembers>
                                         </TablixMember>
                                       </TablixMembers>
                                     </TablixMember>
@@ -1407,7 +1550,7 @@ where
             <RepeatColumnHeaders>true</RepeatColumnHeaders>
             <DataSetName>info</DataSetName>
             <Height>1.8cm</Height>
-            <Width>28.86291cm</Width>
+            <Width>27.6852cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1415,10 +1558,10 @@ where
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>0.85449in</Height>
+        <Height>0.86491in</Height>
         <Style />
       </Body>
-      <Width>11.36335in</Width>
+      <Width>12.3476in</Width>
       <Page>
         <PageHeader>
           <Height>1.50523cm</Height>
@@ -1432,7 +1575,7 @@ where
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Cartera Clientes Vendedor</Value>
+                      <Value>Cartera de Clientes por Vendedor</Value>
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1496,7 +1639,7 @@ where
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!nom_vendedor.Value, "vendedores")</Value>
+                      <Value>="Vendedor: " &amp; Parameters!cod_vendedor.Label</Value>
                       <Style>
                         <FontSize>9pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1574,20 +1717,27 @@ where
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="user_login">
+    <ReportParameter Name="cod_vendedor">
       <DataType>String</DataType>
       <Prompt>Vendedor:</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>vendedores</DataSetName>
+          <ValueField>cod_vendedor</ValueField>
+          <LabelField>nom_vendedor</LabelField>
+        </DataSetReference>
+      </ValidValues>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
-      <NumberOfColumns>3</NumberOfColumns>
+      <NumberOfColumns>2</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>user_login</ParameterName>
+          <ParameterName>cod_vendedor</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

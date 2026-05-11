@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>18.5.11716.220</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2026-05-02T12:39:24.8571520Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2026-05-07T16:26:07.6057190Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -25,8 +25,8 @@
       <Query>
         <DataSourceName>fuente</DataSourceName>
         <QueryParameters>
-          <QueryParameter Name="@cod_vendedor">
-            <Value>=Parameters!cod_vendedor.Value</Value>
+          <QueryParameter Name="@user_login">
+            <Value>=Parameters!user_login.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandText>select 
@@ -73,7 +73,7 @@ from
     ) vta6 on a.ruc_cli = vta6.cod_cliente
    left join vw_cliente cl on cl.ClienteCod = a.ruc_cli
 where 
-    a.cdg_vend = @cod_vendedor
+    b.email = @user_login
     and isnull(a.CDG_ALT,'')&lt;&gt;''</CommandText>
       </Query>
       <Fields>
@@ -130,21 +130,24 @@ where
     <DataSet Name="vendedores">
       <Query>
         <DataSourceName>fuente</DataSourceName>
-        <CommandText>select 
-    a.CDG_VEND as cod,
-    ltrim(rtrim(b.DES_VEND)) as nom    
-from m_client a 
-    inner join M_VENDED b on a.CDG_VEND = b.CDG_VEND
-group by a.cdg_vend, ltrim(rtrim(b.DES_VEND))
-order by 2</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="@user_login">
+            <Value>=Parameters!user_login.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>select cdg_vend as cod_vendedor, ltrim(rtrim(DES_VEND)) as nom_vendedor, email as user_login from M_VENDED where isnull(email,'')&lt;&gt;'' and isnull(email,'') = @user_login</CommandText>
       </Query>
       <Fields>
-        <Field Name="cod">
-          <DataField>cod</DataField>
+        <Field Name="cod_vendedor">
+          <DataField>cod_vendedor</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="nom">
-          <DataField>nom</DataField>
+        <Field Name="nom_vendedor">
+          <DataField>nom_vendedor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="user_login">
+          <DataField>user_login</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -1404,7 +1407,7 @@ order by 2</CommandText>
             <RepeatColumnHeaders>true</RepeatColumnHeaders>
             <DataSetName>info</DataSetName>
             <Height>1.8cm</Height>
-            <Width>28.86292cm</Width>
+            <Width>28.86291cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1412,10 +1415,10 @@ order by 2</CommandText>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.02116in</Height>
+        <Height>0.85449in</Height>
         <Style />
       </Body>
-      <Width>11.82169in</Width>
+      <Width>11.36335in</Width>
       <Page>
         <PageHeader>
           <Height>1.50523cm</Height>
@@ -1493,7 +1496,7 @@ order by 2</CommandText>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Parameters!cod_vendedor.Label</Value>
+                      <Value>=First(Fields!nom_vendedor.Value, "vendedores")</Value>
                       <Style>
                         <FontSize>9pt</FontSize>
                         <FontWeight>Bold</FontWeight>
@@ -1571,27 +1574,20 @@ order by 2</CommandText>
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="cod_vendedor">
+    <ReportParameter Name="user_login">
       <DataType>String</DataType>
-      <Prompt>Vendedor :</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>vendedores</DataSetName>
-          <ValueField>cod</ValueField>
-          <LabelField>nom</LabelField>
-        </DataSetReference>
-      </ValidValues>
+      <Prompt>Vendedor:</Prompt>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfColumns>3</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>cod_vendedor</ParameterName>
+          <ParameterName>user_login</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

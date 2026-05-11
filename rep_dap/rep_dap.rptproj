@@ -55,6 +55,7 @@
     <Report Include="rpt_desempenio_vendedor.rdl" />
     <Report Include="rpt_prueba1.rdl" />
     <Report Include="rpt_ven_cartera_vendedor.rdl" />
+    <Report Include="rpt_ven_cartera_vendedor_jefatura.rdl" />
     <Report Include="rpt_ven_consolidado_ventas_carteras.rdl" />
     <Report Include="rpt_ven_disponibilidad.rdl" />
     <Report Include="rpt_ven_ficha_articulo.rdl" />
