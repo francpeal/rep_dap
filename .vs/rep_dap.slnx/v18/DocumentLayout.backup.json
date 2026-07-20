@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\Desarrollo\\reporting\\rep_dap\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_cartera_vendedor.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
-      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_cartera_vendedor.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_inv_disponibilidad.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_inv_disponibilidad.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_inv_alertaQuiebreStock.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_inv_alertaQuiebreStock.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_cartera_vendedor_jefatura.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
       "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_cartera_vendedor_jefatura.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
+      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_pedido_sugerido.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
@@ -17,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
       "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_ficha_articulo.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
-      "RelativeMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|solutionrelative:rep_dap\\rpt_ven_pedido_sugerido.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B84ED39-5F43-D022-A37B-BA04C9DCE9DA}|rep_dap\\rep_dap.rptproj|D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_disponibilidad.rdl||{420F4200-DD61-4785-81F3-52669CBC208E}",
@@ -34,15 +38,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "rpt_inv_disponibilidad.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_inv_disponibilidad.rdl",
+              "RelativeDocumentMoniker": "rep_dap\\rpt_inv_disponibilidad.rdl",
+              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_inv_disponibilidad.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "rep_dap\\rpt_inv_disponibilidad.rdl [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-26T22:20:25.908Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "rpt_inv_alertaQuiebreStock.rdl [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_inv_alertaQuiebreStock.rdl",
+              "RelativeDocumentMoniker": "rep_dap\\rpt_inv_alertaQuiebreStock.rdl",
+              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_inv_alertaQuiebreStock.rdl [Dise\u00F1o]",
+              "RelativeToolTip": "rep_dap\\rpt_inv_alertaQuiebreStock.rdl [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-26T21:46:13.016Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "rpt_ven_cartera_vendedor_jefatura.rdl [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_cartera_vendedor_jefatura.rdl",
               "RelativeDocumentMoniker": "rep_dap\\rpt_ven_cartera_vendedor_jefatura.rdl",
@@ -54,52 +86,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "rpt_ven_ficha_articulo.rdl [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl",
               "RelativeDocumentMoniker": "rep_dap\\rpt_ven_ficha_articulo.rdl",
               "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ficha_articulo.rdl [Dise\u00F1o]",
               "RelativeToolTip": "rep_dap\\rpt_ven_ficha_articulo.rdl [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-11T02:15:46.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "rpt_ven_cartera_vendedor.rdl [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_cartera_vendedor.rdl",
-              "RelativeDocumentMoniker": "rep_dap\\rpt_ven_cartera_vendedor.rdl",
-              "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_cartera_vendedor.rdl [Dise\u00F1o]",
-              "RelativeToolTip": "rep_dap\\rpt_ven_cartera_vendedor.rdl [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-27T14:49:56.654Z",
+              "WhenOpened": "2026-05-11T02:15:46.635Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl",
               "RelativeDocumentMoniker": "rep_dap\\rpt_ven_ventas_articulo_anio.rdl",
               "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
               "RelativeToolTip": "rep_dap\\rpt_ven_ventas_articulo_anio.rdl [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-11T02:20:19.683Z"
+              "WhenOpened": "2026-05-11T02:20:19.683Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl",
               "RelativeDocumentMoniker": "rep_dap\\rpt_ven_pedido_sugerido.rdl",
               "ToolTip": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
               "RelativeToolTip": "rep_dap\\rpt_ven_pedido_sugerido.rdl [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-11T01:54:21.761Z"
+              "WhenOpened": "2026-05-11T01:54:21.761Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "rpt_ven_disponibilidad.rdl [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Desarrollo\\reporting\\rep_dap\\rep_dap\\rpt_ven_disponibilidad.rdl",
               "RelativeDocumentMoniker": "rep_dap\\rpt_ven_disponibilidad.rdl",

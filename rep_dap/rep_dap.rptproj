@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Report Include="rpt_desempenio_vendedor.rdl" />
+    <Report Include="rpt_inv_alertaQuiebreStock.rdl" />
+    <Report Include="rpt_inv_disponibilidad.rdl" />
     <Report Include="rpt_prueba1.rdl" />
     <Report Include="rpt_ven_cartera_vendedor.rdl" />
     <Report Include="rpt_ven_cartera_vendedor_jefatura.rdl" />
